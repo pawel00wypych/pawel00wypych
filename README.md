@@ -15,7 +15,10 @@ Data Science student at Cracow University of Technology.
 - Comarch employee
 
 Connect with me:
-[https://www.linkedin.com/in/mateusz-jamr%C3%B3z-31b6171b6 https://www.facebook.com/profile.php?id=100005975655996](https://www.linkedin.com/in/wypych-pawel/)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wypych-pawel/)
 
 Languages and Tools:
-python django java react mongodb postgresql 
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
