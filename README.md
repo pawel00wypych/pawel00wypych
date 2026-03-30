@@ -22,7 +22,7 @@
     <img src="https://img.shields.io/badge/-HackerRank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white" alt="HackerRank Profile" />
   </a>
 
-  <a href="https://neetcode.io/profile/Paweł Wypych">
+  <a href="[https://neetcode.io/profile/Paweł Wypych](https://github.com/pawel00wypych/neetcode-submissions-7dwzh72u)">
     <img src="https://img.shields.io/badge/NeetCode-150_Progress-blue?style=for-the-badge&logo=leetcode&logoColor=white" alt="NeetCode" />
   </a>
 </p>
