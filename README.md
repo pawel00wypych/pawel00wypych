@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Paweł Wypych</h1>
-<h3 align="center">Data Science student at Cracow University of Technology.</h3>
+<h3 align="center">Data Science Master student at Cracow University of Technology.</h3>
 
 - I’m currently working on [poker-adaptive-opponent-model](https://github.com/pawel00wypych/poker-adaptive-opponent-model)
 
