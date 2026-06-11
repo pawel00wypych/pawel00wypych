@@ -88,8 +88,7 @@ Python, Pandas, NumPy
 ## Education
 
 - 🎓 MSc in Data Science (2025 – present)  
-  Cracow University of Technology  
-  → Focus: Machine Learning, data analysis, optimization  
+  Cracow University of Technology
 
 - 🎓 BSc in Computer Science (2020 – 2024)  
   Cracow University of Technology
