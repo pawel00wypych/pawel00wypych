@@ -31,7 +31,7 @@ Python, Pandas, NumPy
     <img src="https://leetcard.jacoblin.cool/pawel00wypych?theme=dark&font=Inter" height="150" alt="LeetCode Stats" />
   </a>
   <a href="https://github.com/pawel00wypych/neetcode-submissions-pawel00wypych">
-    <img src="https://img.shields.io/badge/NeetCode-150_Progress-blue?style=for-the-badge&logo=leetcode&logoColor=white" alt="NeetCode" />
+    <img width="338" height="294" alt="image" src="https://github.com/user-attachments/assets/b426f0db-048b-49f6-95b5-a144db24f3ff" />
   </a>
 </p>
 <br><br>
