@@ -6,21 +6,27 @@
 ### ♠️ Poker Adaptive Opponent Model ♠️
 
 **Problem:**  
-Static strategies in poker fail against adaptive opponents. The goal was to model opponent behavior dynamically and adjust decisions in real time.
+A single fixed poker strategy may perform differently against aggressive, passive and unpredictable opponents. The project investigates whether modelling an opponent's behaviour and adapting the agent's policy can improve performance in heads-up Texas Hold'em.
 
 **Approach:**  
-- Built an opponent modeling system using statistical analysis of player actions  
-- Implemented feature extraction from game history (bet sizing, frequency patterns)  
-- Applied machine learning techniques to classify opponent strategies  
-- Designed adaptive decision logic based on predicted behavior  
+- Built a heads-up poker simulation using PyPokerEngine
+- Implemented Monte Carlo agents
+- Created predefined aggressive, calling, fish and rule-based opponents
+- Extracted behavioral statistics from observed actions, including fold, call and raise frequencies
+- Classified opponents into behavioral profiles during gameplay
+- Included the estimated opponent type in the adaptive agent's state representation
+- Compared the adaptive approach with a single-policy agent and rule-based baselines
+- Evaluated agents using BB/100, profit, win rate, bust rate and 95% confidence intervals
 
 **Tech Stack:**  
-Python, Pandas, NumPy
+Python, NumPy, Pandas, PyPokerEngine, pytest
 
-**Outcome:**  
-- Able to dynamically adjust strategy based on opponent tendencies  
-- Improved decision consistency compared to static baseline  
-- Modular architecture for extending with more advanced models  
+**Current results:**  
+- The agent can update its opponent profile from observed gameplay
+- Separate behaviour can be learned for different opponent categories
+- The current results show that performance depends strongly on the opponent type
+- The evaluation pipeline supports reproducible comparison of adaptive and non-adaptive strategies
+- The modular architecture allows additional state features, classifiers and reinforcement learning algorithms to be introduced
 
 🔗 [View Project](https://github.com/pawel00wypych/poker-adaptive-opponent-model)
 <br><br>
@@ -31,7 +37,7 @@ Python, Pandas, NumPy
     <img src="https://leetcard.jacoblin.cool/pawel00wypych?theme=dark&font=Inter" height="150" alt="LeetCode Stats" />
   </a>
   <a href="https://github.com/pawel00wypych/neetcode-submissions-pawel00wypych">
-    <img width="338" height="294" alt="image" src="https://github.com/user-attachments/assets/b426f0db-048b-49f6-95b5-a144db24f3ff" />
+    <img width="338" height="294" alt="image" src="https://github.com/user-attachments/assets/1ec2195f-15e4-405c-b6bc-99f9cfa998a2" />
   </a>
 </p>
 <br><br>
