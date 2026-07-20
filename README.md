@@ -5,10 +5,6 @@
 ## Featured Projects
 ### ♠️ Poker Adaptive Opponent Model ♠️
 
-## Featured Projects
-
-### ♠️ Poker Adaptive Opponent Model ♠️
-
 **Problem:**  
 Static poker strategies are effective only against specific opponent behaviours. This project investigates whether an agent can dynamically identify an opponent's playing style and improve its decisions by switching between specialized reinforcement learning policies during heads-up Texas Hold'em.
 
