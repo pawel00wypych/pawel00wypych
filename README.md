@@ -5,28 +5,33 @@
 ## Featured Projects
 ### ♠️ Poker Adaptive Opponent Model ♠️
 
+## Featured Projects
+
+### ♠️ Poker Adaptive Opponent Model ♠️
+
 **Problem:**  
-A single fixed poker strategy may perform differently against aggressive, passive and unpredictable opponents. The project investigates whether modelling an opponent's behaviour and adapting the agent's policy can improve performance in heads-up Texas Hold'em.
+Static poker strategies are effective only against specific opponent behaviours. This project investigates whether an agent can dynamically identify an opponent's playing style and improve its decisions by switching between specialized reinforcement learning policies during heads-up Texas Hold'em.
 
 **Approach:**  
-- Built a heads-up poker simulation using PyPokerEngine
-- Implemented Monte Carlo agents
-- Created predefined aggressive, calling, fish and rule-based opponents
-- Extracted behavioral statistics from observed actions, including fold, call and raise frequencies
-- Classified opponents into behavioral profiles during gameplay
-- Included the estimated opponent type in the adaptive agent's state representation
-- Compared the adaptive approach with a single-policy agent and rule-based baselines
-- Evaluated agents using BB/100, profit, win rate, bust rate and 95% confidence intervals
+- Built a heads-up Texas Hold'em environment using PyPokerEngine
+- Implemented Monte Carlo reinforcement learning with state-action value tables
+- Trained specialized policies against aggressive, calling and fish opponents, together with a general-purpose policy
+- Developed an adaptive agent that classifies opponents online and switches between learned policies during gameplay
+- Extracted behavioural features from observed actions, including fold, call and raise frequencies
+- Compared the adaptive agent with specialized agents, a single-policy agent, an oracle adaptive agent and a rule-based baseline
+- Designed a reproducible evaluation pipeline with multiple random seeds, checkpoints and statistical analysis
+- Analysed learned policies using Q-table comparison and visualization tools
+- Evaluated performance using profit (BB), BB/100, win rate, bust rate, classifier accuracy, classifier coverage and 95% confidence intervals
 
 **Tech Stack:**  
-Python, NumPy, Pandas, PyPokerEngine, pytest
+Python, NumPy, Pandas, PyPokerEngine, Matplotlib, pytest
 
-**Current results:**  
-- The agent can update its opponent profile from observed gameplay
-- Separate behaviour can be learned for different opponent categories
-- The current results show that performance depends strongly on the opponent type
-- The evaluation pipeline supports reproducible comparison of adaptive and non-adaptive strategies
-- The modular architecture allows additional state features, classifiers and reinforcement learning algorithms to be introduced
+**Current Results:**  
+- The adaptive agent successfully identifies opponent behaviour and dynamically switches between specialized policies during gameplay
+- Learned specialized policies outperform mismatched strategies and achieve performance close to an oracle agent with perfect opponent knowledge
+- The adaptive Monte Carlo agent consistently defeats aggressive, calling and fish opponents in the evaluated environment
+- The project includes a complete evaluation and reporting pipeline supporting checkpoint comparison, multi-seed experiments and Q-table analysis
+- The modular architecture is designed for further research, enabling new state representations, classifiers and reinforcement learning algorithms to be integrated with minimal changes
 
 🔗 [View Project](https://github.com/pawel00wypych/poker-adaptive-opponent-model)
 <br><br>
