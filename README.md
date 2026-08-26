@@ -6,28 +6,30 @@
 ### ♠️ Poker Adaptive Opponent Model ♠️
 
 **Problem:**  
-Static poker strategies are effective only against specific opponent behaviours. This project investigates whether an agent can dynamically identify an opponent's playing style and improve its decisions by switching between specialized reinforcement learning policies during heads-up Texas Hold'em.
+Static poker policies may perform well against one playing style but fail against another. This project investigates whether online opponent classification and switching between specialized reinforcement-learning policies improves performance over a fixed general policy in heads-up Texas Hold'em.
 
 **Approach:**  
-- Built a heads-up Texas Hold'em environment using PyPokerEngine
-- Implemented Monte Carlo reinforcement learning with state-action value tables
-- Trained specialized policies against aggressive, calling and fish opponents, together with a general-purpose policy
-- Developed an adaptive agent that classifies opponents online and switches between learned policies during gameplay
-- Extracted behavioural features from observed actions, including fold, call and raise frequencies
-- Compared the adaptive agent with specialized agents, a single-policy agent, an oracle adaptive agent and a rule-based baseline
-- Designed a reproducible evaluation pipeline with multiple random seeds, checkpoints and statistical analysis
-- Analysed learned policies using Q-table comparison and visualization tools
-- Evaluated performance using profit (BB), BB/100, win rate, bust rate, classifier accuracy, classifier coverage and 95% confidence intervals
+- Built an experimental framework on top of PyPokerEngine
+- Implemented tabular Monte Carlo, Q-learning, SARSA and Double Q-learning
+- Trained one general policy and specialists for tight, aggressive and calling opponents
+- Developed an adaptive agent that classifies opponents during play and selects an appropriate specialist policy
+- Compared adaptive agents with fixed general policies, family-informed Oracle agents and simple sanity baselines
+- Evaluated training opponents, unseen variants, stress-test strategies and learned agents in cross-play
+- Created a frozen, multi-seed protocol using paired evaluations and seed-level confidence intervals
+- Implemented a fail-fast, resumable pipeline for training, evaluation, validation and automatic report generation
+- Added classifier-quality, seed-stability and learning-curve diagnostics
 
 **Tech Stack:**  
-Python, NumPy, Pandas, PyPokerEngine, Matplotlib, pytest
+Python, NumPy, Pandas, SciPy, PyPokerEngine, Matplotlib, pytest, Ruff
 
-**Current Results:**  
-- The adaptive agent successfully identifies opponent behaviour and dynamically switches between specialized policies during gameplay
-- Learned specialized policies outperform mismatched strategies and achieve performance close to an oracle agent with perfect opponent knowledge
-- The adaptive Monte Carlo agent consistently defeats aggressive, calling and fish opponents in the evaluated environment
-- The project includes a complete evaluation and reporting pipeline supporting checkpoint comparison, multi-seed experiments and Q-table analysis
-- The modular architecture is designed for further research, enabling new state representations, classifiers and reinforcement learning algorithms to be integrated with minimal changes
+**Current Status and Preliminary Findings:**  
+- The complete verification pipeline finished successfully, executing all 33 training, evaluation and reporting stages
+- Q-learning achieved the strongest preliminary average performance among adaptive agents
+- The classifier is highly accurate when it identifies an opponent, although coverage is lower against aggressive variants
+- Adaptive agents generally remain close to the family-informed Oracle, suggesting that policy quality is a larger limitation than switching cost
+- Verification has not yet established a broad statistically significant advantage of adaptation over fixed general policies
+- Diagnostic experiments identified benchmark limitations, including vulnerability to `always_raise`, saturated results against tight opponents and positional asymmetry in the poker engine
+- Final conclusions will be based on the frozen 10,000-episode, five-seed experiment
 
 🔗 [View Project](https://github.com/pawel00wypych/poker-adaptive-opponent-model)
 <br><br>
@@ -99,14 +101,6 @@ Python, NumPy, Pandas, PyPokerEngine, Matplotlib, pytest
 
 - 🎓 BSc in Computer Science (2020 – 2024)  
   Cracow University of Technology
-<br><br>
-
-## GitHub Stats
-
-<p align="left">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=pawel00wypych&show_icons=true&theme=dark" height="150"/>
-  <img src="https://streak-stats.demolab.com?user=pawel00wypych&theme=dark" height="150"/>
-</p>
 <br><br>
 
 ## Connect with me
